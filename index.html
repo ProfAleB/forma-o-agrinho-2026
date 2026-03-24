@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agro - Estufa e Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu-topo">
+        <button class="btn-menu ativo" onclick="mudarPagina('home')">Simulador</button>
+        <button class="btn-menu" onclick="mudarPagina('sobre-nos')">Sobre Nós</button>
+        <button class="btn-menu" onclick="mudarPagina('agrinho')">Concurso Agrinho</button>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="pagina">
+            <header>
+                <h1>Estufa de <span>Morangos</span></h1>
+            </header>
+            
+            <main>
+                <div class="info-destaque">
+                    <p>Projeto desenvolvido como proposta para o <strong>Concurso Agrinho 2026</strong>. O objetivo deste simulador é demonstrar na prática como a tecnologia e o controle de clima são aliados da sustentabilidade no campo.</p>
+                </div>
+
+                <div class="controles">
+                    <p class="instrucao-simulador">Ajuste os controles para encontrar o clima ideal para o cultivo:</p>
+                    
+                    <div class="controle-item">
+                        <label for="temp">Temperatura: <span id="val-temp">20</span>°C</label>
+                        <input type="range" id="temp" min="5" max="40" value="20">
+                    </div>
+                    <div class="controle-item">
+                        <label for="umidade-ar">Umidade do Ar: <span id="val-umidade-ar">70</span>%</label>
+                        <input type="range" id="umidade-ar" min="20" max="100" value="70">
+                    </div>
+                    <div class="controle-item">
+                        <label for="umidade-solo">Umidade do Solo: <span id="val-umidade-solo">60</span>%</label>
+                        <input type="range" id="umidade-solo" min="10" max="100" value="60">
+                    </div>
+                </div>
+
+                <div id="painel-status" class="status-ideal">
+                    <h2 id="texto-status">Ambiente Ideal!</h2>
+                    <p id="detalhe-status">Os morangos estão crescendo saudáveis.</p>
+                </div>
+
+                <div class="info-rentabilidade">
+                    <h3>A Força do Pequeno Produtor</h3>
+                    <p>Uma pequena estufa de morangos suspensos (cerca de 100m²) pode abrigar até 1.000 plantas. Veja o potencial:</p>
+                    <ul>
+                        <li><strong>Produção Média:</strong> 1kg a 1,5kg por planta/safra.</li>
+                        <li><strong>Preço de Venda:</strong> Entre R$ 20,00 e R$ 30,00 por quilo.</li>
+                        <li><strong>Faturamento Bruto:</strong> Pode ultrapassar <strong>R$ 20.000,00</strong>!</li>
+                    </ul>
+                    <p>O uso da tecnologia (como os sensores simulados acima) evita perdas por pragas, economiza água e garante frutos com padrão de excelência, maximizando o lucro e preservando a natureza.</p>
+                </div>
+            </main>
+        </section>
+
+        <section id="sobre-nos" class="pagina oculto">
+            <header>
+                <h1>Sobre <span>Nós</span></h1>
+            </header>
+            <main class="conteudo-texto">
+                <p>Somos estudantes e educadores apaixonados por tecnologia e sustentabilidade. Acreditamos que o futuro do agronegócio depende da inovação e do respeito ao meio ambiente.</p>
+                <p>Este projeto foi desenvolvido durante nossa formação para demonstrar como o **HTML, CSS e JavaScript** podem ser usados para criar ferramentas que ajudam a entender o clima, a natureza e a produção de alimentos de forma interativa.</p>
+                <h3>Nossa Missão</h3>
+                <ul>
+                    <li>Conectar tecnologia ao campo.</li>
+                    <li>Incentivar o aprendizado prático.</li>
+                    <li>Promover a agricultura sustentável.</li>
+                </ul>
+            </main>
+        </section>
+
+        <section id="agrinho" class="pagina oculto">
+            <header>
+                <h1>Concurso <span>Agrinho</span></h1>
+            </header>
+            <main class="conteudo-texto center">
+                <img src="imagens/Agrinho cortado 2026.png" alt="Personagens do Programa Agrinho" class="imagem-agrinho">
+                <p>O <strong>Programa Agrinho</strong> é a maior iniciativa de responsabilidade social do Sistema FAEP/SENAR-PR. Ele atua nas escolas públicas e particulares, levando informações sobre saúde, meio ambiente e cidadania para milhares de crianças e jovens.</p>
+                <p>Através de projetos como este simulador, conectamos os valores do Agrinho (inovação, educação e campo) diretamente com as salas de aula de tecnologia, preparando os alunos para serem os transformadores do amanhã!</p>
+            </main>
+        </section>
+    </div>
+
+    <footer class="rodape">
+        <p>Projeto desenvolvido para o concurso Agrinho 2026 pelo aluno José da Silva</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
